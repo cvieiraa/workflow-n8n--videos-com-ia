@@ -82,6 +82,9 @@ No n8n, crie as credenciais necessárias e associe aos nodes:
 - `Pegar Vídeo Pronto` / `Baixar Vídeo Pronto` — obtém e baixa o vídeo final.
 
 ---
+## Abertura do docker n8n
+
+docker run --hostname=a54ab346be99 --user=node --env=WEBHOOK_URL=http://localhost:5678 --env=N8N_DEFAULT_BINARY_DATA_MODE=filesystem --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --env=NODE_VERSION=22.21.0 --env=YARN_VERSION=1.22.22 --env=NODE_ICU_DATA=/usr/local/lib/node_modules/full-icu --env=NODE_ENV=production --env=N8N_RELEASE_TYPE=stable --env=SHELL=/bin/sh --volume=C:\Docker\n8n-data:/home/node/.n8n --network=bridge --workdir=/home/node -p 5678:5678 --restart=no --label='org.opencontainers.image.description=Workflow Automation Tool' --label='org.opencontainers.image.source=https://github.com/n8n-io/n8n' --label='org.opencontainers.image.title=n8n' --label='org.opencontainers.image.url=https://n8n.io' --label='org.opencontainers.image.version=1.121.3' --runtime=runc -d docker.n8n.io/n8nio/n8n
 
 ## Webhook (Formulário) — como enviar uma requisição de teste
 
